@@ -30,8 +30,8 @@
 
 - (id)next 
 {
-    id obj = [self peek];
-    if (obj) {
+    var obj = [self peek];
+    if (obj !== nil && obj !== undefined) {
         index++;
     }
     return obj;

@@ -1,7 +1,7 @@
 
 @import "TDSymbolNode.j"
 
-@interface TDSymbolRootNode : TDSymbolNode 
+@implementation TDSymbolRootNode : TDSymbolNode 
 {
 }
 

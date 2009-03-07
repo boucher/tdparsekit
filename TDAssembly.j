@@ -3,7 +3,7 @@
 
 TDAssemblyDefaultDelimiter = @"/";
 
-@interface TDAssembly : CPObject
+@implementation TDAssembly : CPObject
 {
     CPArray     stack;
     id          target;
@@ -24,7 +24,7 @@ TDAssemblyDefaultDelimiter = @"/";
 
 - (id)initWithString:(CPString)s 
 {
-    if self = [super init] {
+    if (self = [super init]) {
         stack = [];
         string = s;
     }
@@ -101,7 +101,7 @@ TDAssemblyDefaultDelimiter = @"/";
 - (id)pop 
 {
     var result = nil;
-    if (stack.count) {
+    if (stack.length) {
         result = [stack lastObject];
         [stack removeLastObject];
     }
@@ -116,9 +116,8 @@ TDAssemblyDefaultDelimiter = @"/";
 }
 
 - (BOOL)isStackEmpty {
-    return 0 === stack.count;
+    return 0 === stack.length;
 }
-
 
 - (CPArray)objectsAbove:(id)fence 
 {

@@ -2,7 +2,7 @@
 @import <Foundation/Foundation.j>
 @import "TDAssembly.j"
 
-@interface TDParser : CPObject 
+@implementation TDParser : CPObject 
 {
     id          assembler;
     SEL         selector;

@@ -53,7 +53,7 @@
         [commentState addSingleLineStartSymbol:@"//"];
         [commentState addMultiLineStartSymbol:@"/*" endSymbol:@"*/"];
         
-        tokenizerStates = [[NSMutableArray alloc] initWithCapacity:256];
+        tokenizerStates = [];
         
         [self addTokenizerState:whitespaceState from:   0 to: ' ']; // From:  0 to: 32    From:0x00 to:0x20
         [self addTokenizerState:symbolState     from:  33 to:  33];
@@ -72,7 +72,7 @@
         [self addTokenizerState:symbolState     from:  91 to:  96];
         [self addTokenizerState:wordState       from: 'a' to: 'z']; // From: 97 to:122    From:0x61 to:0x7A
         [self addTokenizerState:symbolState     from: 123 to: 191];
-        [self addTokenizerState:wordState       from:0xC0 to:0xFF]; // From:192 to:255    From:0xC0 to:0xFF
+        [self addTokenizerState:wordState       from: 192 to: 255]; // From:192 to:255    From:0xC0 to:0xFF
     }
 
     return self;

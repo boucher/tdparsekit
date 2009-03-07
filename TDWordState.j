@@ -22,7 +22,7 @@
         [self setWordChars:YES from: '-' to: '-'];
         [self setWordChars:YES from: '_' to: '_'];
         [self setWordChars:YES from:'\'' to:'\''];
-        [self setWordChars:YES from:0xC0 to:0xFF];
+        [self setWordChars:YES from: 192 to: 255];
     }
 
     return self;
